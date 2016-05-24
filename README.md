@@ -18,3 +18,11 @@ mkdir -p bin
 docker run -it --rm -v $(pwd)/bin:/dist mvisonneau/wavefront-forwarder-builder:latest
 docker build -t wavefront-forwarder .
 ```
+
+## Dependencies
+
+- This container rely on the output of this other one : <a href="https://hub.docker.com/r/mvisonneau/wavefront-forwarder-builder">mvisonneau/wavefront-forwarder-builder</a>
+
+## Credits
+
+- Thanks to <a href="https://github.com/camptocamp">CampToCamp</a> for the inspiration!

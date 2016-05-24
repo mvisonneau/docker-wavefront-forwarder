@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 
-openssl aes-256-cbc -K $encrypted_42099b4af021_key -iv $encrypted_42099b4af021_iv -in .dockercfg.enc -out ~/.dockercfg -d
+mkdir -p ~/.docker && openssl aes-256-cbc -K $encrypted_42099b4af021_key -iv $encrypted_42099b4af021_iv -in .dockercfg.enc -out ~/.docker/config.json -d
 if [ "$TRAVIS_BRANCH" == "master" ]; then
   echo "Deploying image to docker hub for master (latest)"
   docker push "mvisonneau/wavefront-forwarder:latest"
