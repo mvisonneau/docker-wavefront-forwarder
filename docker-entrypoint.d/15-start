@@ -1,7 +1,4 @@
-#!/bin/bash
-
-set -e
-set -x
+#!/bin/bash -ex
 
 # The name of the jar
 DAEMON="/opt/wavefront/bin/wavefront-push-agent.jar"
