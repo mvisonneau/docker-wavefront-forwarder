@@ -5,6 +5,6 @@ services:
 install:
   - ./.build.bash
 script:
-  - docker ps | grep -q wavefront-forwarder && echo "CONTAINER BUILT & RUNNING SUCCESSFULLY" || "CONTAINER NOT RUNNING"
+  - docker ps | grep -q wavefront-forwarder && echo "CONTAINER BUILT & RUNNING SUCCESSFULLY" || echo "CONTAINER NOT RUNNING"
 after_success:
  - ./.publish.bash
