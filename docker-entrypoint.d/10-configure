@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+set -x
+
+# VARIABLES
+export PREFIX=${PREFIX:-""}
+export SERVER=${SERVER:-"https://metrics.wavefront.com/api/"}
+export HOSTNAME=${HOSTNAME:-`hostname`}
+test ${TOKEN}
+
+# CONFIGURE
+/usr/local/bin/confd -onetime -backend env

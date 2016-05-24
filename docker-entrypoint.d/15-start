@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+set -x
+
+# The name of the jar
+DAEMON="/opt/wavefront/bin/wavefront-push-agent.jar"
+# This should be the full path to the configuration file.
+CONFIG_FILE="/opt/wavefront/conf/wavefront.conf"
+# Java options for memory, GC, etc.
+JAVA_OPTS="-Xmx1G"
+
+# RUN
+/usr/bin/java ${JAVA_OPTS} -jar ${DAEMON} -f ${CONFIG_FILE}

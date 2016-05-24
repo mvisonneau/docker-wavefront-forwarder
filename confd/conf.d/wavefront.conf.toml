@@ -1,0 +1,3 @@
+[template]
+src = "wavefront.conf.tmpl"
+dest = "/opt/wavefront/conf/wavefront.conf"
